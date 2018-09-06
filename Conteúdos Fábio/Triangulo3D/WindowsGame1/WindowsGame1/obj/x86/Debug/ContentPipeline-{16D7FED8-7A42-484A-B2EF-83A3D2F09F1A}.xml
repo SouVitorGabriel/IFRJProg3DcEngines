@@ -8,10 +8,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>c:\users\vitor\documents\visual studio 2017\Projects\WindowsGame1\WindowsGame1\WindowsGame1Content\</RootDirectory>
-      <LoggerRootDirectory>c:\users\vitor\documents\visual studio 2017\Projects\WindowsGame1\WindowsGame1\WindowsGame1\</LoggerRootDirectory>
-      <IntermediateDirectory>c:\users\vitor\documents\visual studio 2017\Projects\WindowsGame1\WindowsGame1\WindowsGame1\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>c:\users\vitor\documents\visual studio 2017\Projects\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\vitor\Documents\IFRJ\2018_2\Programacao3D\Conteúdos Fábio\Triangulo3D\WindowsGame1\WindowsGame1Content\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\vitor\Documents\IFRJ\2018_2\Programacao3D\Conteúdos Fábio\Triangulo3D\WindowsGame1\WindowsGame1\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\vitor\Documents\IFRJ\2018_2\Programacao3D\Conteúdos Fábio\Triangulo3D\WindowsGame1\WindowsGame1\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\vitor\Documents\IFRJ\2018_2\Programacao3D\Conteúdos Fábio\Triangulo3D\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

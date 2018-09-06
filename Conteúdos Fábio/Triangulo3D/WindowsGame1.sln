@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.4
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsGame1", "WindowsGame1\WindowsGame1\WindowsGame1.csproj", "{03B2A2CC-12DE-4404-8E90-315514551BFB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Triangulo", "WindowsGame1\WindowsGame1\Triangulo.csproj", "{03B2A2CC-12DE-4404-8E90-315514551BFB}"
 EndProject
-Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "WindowsGame1Content", "WindowsGame1\WindowsGame1Content\WindowsGame1Content.contentproj", "{16D7FED8-7A42-484A-B2EF-83A3D2F09F1A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrianguloContent", "WindowsGame1\WindowsGame1Content\TrianguloContent.contentproj", "{16D7FED8-7A42-484A-B2EF-83A3D2F09F1A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

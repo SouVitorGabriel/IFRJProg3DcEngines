@@ -67,9 +67,10 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WindowsGame1Content\WindowsGame1Content.contentproj">
-      <Name>WindowsGame1Content</Name>
+    <ProjectReference Include="..\WindowsGame1Content\TrianguloContent.contentproj">
+      <Name>TrianguloContent</Name>
       <XnaReferenceType>Content</XnaReferenceType>
+      <Project>{16D7FED8-7A42-484A-B2EF-83A3D2F09F1A}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

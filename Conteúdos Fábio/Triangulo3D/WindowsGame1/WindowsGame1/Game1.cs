@@ -23,6 +23,9 @@ namespace WindowsGame1
         Matrix view;
         Matrix projection;
 
+        float angle;
+        Random random;
+
         BasicEffect effect;
 
         public Game1()
@@ -38,12 +41,13 @@ namespace WindowsGame1
             world = Matrix.Identity;
             view = Matrix.CreateLookAt(new Vector3(0,0,5), Vector3.Zero, Vector3.Up);
             projection = Matrix.CreatePerspectiveFieldOfView(MathHelper.PiOver4, Window.ClientBounds.Width / (float)Window.ClientBounds.Height, 1, 100);
-            //GraphicsDevice.RasterizerState = RasterizerState.CullNone;
+
+            random = new Random();
 
             verts = new VertexPositionColor[3];
             verts[0] = new VertexPositionColor(new Vector3(0, 1, 0), Color.Red);
-            verts[0] = new VertexPositionColor(new Vector3(1, -1, 0), Color.Green);
-            verts[0] = new VertexPositionColor(new Vector3(-1, -1, 0), Color.Blue);
+            verts[1] = new VertexPositionColor(new Vector3(1, -1, 0), Color.Green);
+            verts[2] = new VertexPositionColor(new Vector3(-1, -1, 0), Color.Blue);
 
             vertexBuffer = new VertexBuffer(GraphicsDevice, typeof(VertexPositionColor), verts.Length, BufferUsage.None);
             vertexBuffer.SetData<VertexPositionColor>(verts);
@@ -58,45 +62,41 @@ namespace WindowsGame1
         /// </summary>
         protected override void LoadContent()
         {
-            // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             effect = new BasicEffect(GraphicsDevice);
-            // TODO: use this.Content to load your game content here
         }
 
-        /// <summary>
-        /// UnloadContent will be called once per game and is the place to unload
-        /// all content.
-        /// </summary>
         protected override void UnloadContent()
         {
-            // TODO: Unload any non ContentManager content here
+
         }
 
-        /// <summary>
-        /// Allows the game to run logic such as updating the world,
-        /// checking for collisions, gathering input, and playing audio.
-        /// </summary>
-        /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
-            // TODO: Add your update logic here
+            //world *= Matrix.CreateRotationY(0.01f);
+            //world *= Matrix.CreateRotationX(0.01f);
+            //world *= Matrix.CreateRotationZ(0.01f);
+            //world *= Matrix.CreateTranslation(0.02f, 0, 0);
+            world = Matrix.Identity;
+
+            world *= Matrix.CreateRotationY(angle);
+            
+            world *= Matrix.CreateTranslation(2, 0, 0);
+            world *= Matrix.CreateScale(1, 2, 1);
+            angle += 0.05f;
 
             base.Update(gameTime);
         }
 
-        /// <summary>
-        /// This is called when the game should draw itself.
-        /// </summary>
-        /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
+
+            GraphicsDevice.RasterizerState = RasterizerState.CullNone;
 
             GraphicsDevice.SetVertexBuffer(vertexBuffer);
 
