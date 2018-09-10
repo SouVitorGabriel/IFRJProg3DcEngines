@@ -12,19 +12,44 @@ namespace MoonPatrolXNA
     class Player : GameObject
     {
         int minX = 50;
-        int maxX = 300;
+        int maxX = 600;
+
+        bool isJumping = false;
+
+        float jumpForce = 0;
+        float inicialPositionY = 0;
         public Player(ContentManager content, string path, Point position, Point size) : base (content, path, position, size)
         {
-
+            inicialPositionY = position.Y;
         }
 
         public override void Update(GameTime gameTime)
         {
             Move(gameTime);
 
-            if (Keyboard.GetState().IsKeyDown(Keys.Up))
+            if (Keyboard.GetState().IsKeyDown(Keys.Up) && !isJumping)
             {
+                Jump();
 
+            }
+            if (isJumping)
+            {
+                this.SetPositionY(Position.Y - (int)(jumpForce * gameTime.ElapsedGameTime.TotalSeconds));
+                jumpForce -= 200 * (float)gameTime.ElapsedGameTime.TotalSeconds;
+                Console.WriteLine("força: " + jumpForce);
+
+                if ((int)(jumpForce * gameTime.ElapsedGameTime.TotalSeconds) < 1
+                    && jumpForce > -1)
+                {
+                    jumpForce = -1;
+                }
+
+                if (Position.Y > inicialPositionY)
+                {
+                    SetPositionY( (int)inicialPositionY);
+                    isJumping = false;
+                    jumpForce = 0;
+                }
             }
         }
 
@@ -32,24 +57,25 @@ namespace MoonPatrolXNA
         {
             if (Keyboard.GetState().IsKeyDown(Keys.Left))
             {
-                collider.X -= 1 * gameTime.ElapsedGameTime.Milliseconds / 10;
+                this.SetPositionX(Position.X - (gameTime.ElapsedGameTime.Milliseconds / 10));
             }
 
             if (Keyboard.GetState().IsKeyDown(Keys.Right))
             {
-                collider.X += 1 * gameTime.ElapsedGameTime.Milliseconds / 10;
+                this.SetPositionX(Position.X + 1 * gameTime.ElapsedGameTime.Milliseconds / 10);
             }
 
-            if (collider.X > maxX)
-                collider.X = maxX;
+            if (Position.X > maxX)
+                this.SetPositionX(maxX);
 
-            if (collider.X < minX)
-                collider.X = minX;
+            if (Position.X < minX)
+                this.SetPositionX(minX);
         }
 
         public void Jump()
         {
-
+            isJumping = true;
+            jumpForce = 200;
         }
     }
 }

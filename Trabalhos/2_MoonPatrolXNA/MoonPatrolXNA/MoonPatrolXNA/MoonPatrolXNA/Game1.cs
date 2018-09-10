@@ -18,6 +18,8 @@ namespace MoonPatrolXNA
 
         Player player;
 
+        GameObject chao;
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -27,7 +29,9 @@ namespace MoonPatrolXNA
         protected override void Initialize()
         {
             base.Initialize();
-            player = new Player(Content, @"filme", new Point(400, 400), new Point(50, 50));
+            player = new Player(Content, @"filme", new Point(400, 360), new Point(50, 50));
+
+            chao = new GameObject(Content, @"blank", new Point(Window.ClientBounds.Width/2, Window.ClientBounds.Height - 45), new Point(Window.ClientBounds.Width, 100));
         }
         
         protected override void LoadContent()
@@ -54,6 +58,7 @@ namespace MoonPatrolXNA
             GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.Begin();
             player.Draw(spriteBatch);
+            chao.Draw(spriteBatch, Color.Purple);
             spriteBatch.End();
             base.Draw(gameTime);
         }

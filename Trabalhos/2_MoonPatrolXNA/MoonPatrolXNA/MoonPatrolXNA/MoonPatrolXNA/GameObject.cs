@@ -10,14 +10,13 @@ namespace MoonPatrolXNA
 {
     class GameObject
     {
-        protected Point position;
-        public Point Position { get => position; set { position = value; collider.X = position.X - collider.Width / 2; collider.Y = position.Y - collider.Height / 2; } }
+        private Point position;
+        public Point Position { get => position; }
 
-        protected Rectangle collider;
+        private Rectangle collider;
         public Rectangle Collider { get => collider; }
 
-        protected Texture2D texture;
-
+        private Texture2D texture;
       
         public GameObject(ContentManager content, string texturePath, Point position, Point size)
         {
@@ -35,9 +34,22 @@ namespace MoonPatrolXNA
         {
             sb.Draw(texture, collider, Color.White);
         }
-        
-        
-        
+
+        public virtual void Draw(SpriteBatch sb, Color color)
+        {
+            sb.Draw(texture, collider, color);
+        }
+
+        public virtual void SetPositionX(int position)
+        {
+            this.position.X = position;
+            collider.X = position - collider.Width / 2;
+        }
+        public virtual void SetPositionY(int position)
+        {
+            this.position.Y = position;
+            collider.Y = position - collider.Height / 2;
+        }
 
         public virtual void OnColision()
         {

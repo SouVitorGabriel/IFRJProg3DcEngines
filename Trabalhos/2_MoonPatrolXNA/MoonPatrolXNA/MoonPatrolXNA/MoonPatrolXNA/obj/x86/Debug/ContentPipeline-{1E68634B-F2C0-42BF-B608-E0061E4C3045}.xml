@@ -10,6 +10,24 @@
       <Output>C:\Users\vitor\Documents\IFRJ\2018_2\Programacao3D\Trabalhos\2_MoonPatrolXNA\MoonPatrolXNA\MoonPatrolXNA\MoonPatrolXNA\bin\x86\Debug\Content\filme.xnb</Output>
       <Time>2018-09-05T19:48:43.9982252-03:00</Time>
     </Item>
+    <Item>
+      <Source>blank.png</Source>
+      <Name>blank</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\vitor\Documents\IFRJ\2018_2\Programacao3D\Trabalhos\2_MoonPatrolXNA\MoonPatrolXNA\MoonPatrolXNA\MoonPatrolXNA\bin\x86\Debug\Content\blank.xnb</Output>
+      <Time>2018-09-09T19:40:18.6723122-03:00</Time>
+    </Item>
+    <Item>
+      <Source>sprite.png</Source>
+      <Name>sprite</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\vitor\Documents\IFRJ\2018_2\Programacao3D\Trabalhos\2_MoonPatrolXNA\MoonPatrolXNA\MoonPatrolXNA\MoonPatrolXNA\bin\x86\Debug\Content\sprite.xnb</Output>
+      <Time>2018-09-09T19:40:18.6862864-03:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{1E68634B-F2C0-42BF-B608-E0061E4C3045}</ContentProjectGUID>
