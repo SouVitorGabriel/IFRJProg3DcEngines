@@ -34,3 +34,4 @@ C:\Users\vitor\Documents\IFRJ\2018_2\Programacao3D\Trabalhos\2_MoonPatrolXNA\Moo
 C:\Users\vitor\Documents\IFRJ\2018_2\Programacao3D\Trabalhos\2_MoonPatrolXNA\MoonPatrolXNA\MoonPatrolXNA\MoonPatrolXNA\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.xml
 C:\Users\vitor\Documents\IFRJ\2018_2\Programacao3D\Trabalhos\2_MoonPatrolXNA\MoonPatrolXNA\MoonPatrolXNA\MoonPatrolXNA\bin\x86\Debug\Content\blank.xnb
 C:\Users\vitor\Documents\IFRJ\2018_2\Programacao3D\Trabalhos\2_MoonPatrolXNA\MoonPatrolXNA\MoonPatrolXNA\MoonPatrolXNA\bin\x86\Debug\Content\sprite.xnb
+C:\Users\vitor\Documents\IFRJ\2018_2\Programacao3D\Trabalhos\2_MoonPatrolXNA\MoonPatrolXNA\MoonPatrolXNA\MoonPatrolXNA\bin\x86\Debug\MoonPatrolXNA.exe.config

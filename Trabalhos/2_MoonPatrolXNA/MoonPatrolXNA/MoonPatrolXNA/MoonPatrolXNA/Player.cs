@@ -14,7 +14,7 @@ namespace MoonPatrolXNA
         int minX = 50;
         int maxX = 600;
 
-        bool isJumping = false;
+        bool jumping = false;
 
         float jumpForce = 0;
         float inicialPositionY = 0;
@@ -27,12 +27,12 @@ namespace MoonPatrolXNA
         {
             Move(gameTime);
 
-            if (Keyboard.GetState().IsKeyDown(Keys.Up) && !isJumping)
+            if (Keyboard.GetState().IsKeyDown(Keys.Up) && !jumping)
             {
                 Jump();
 
             }
-            if (isJumping)
+            if (jumping)
             {
                 this.SetPositionY(Position.Y - (int)(jumpForce * gameTime.ElapsedGameTime.TotalSeconds));
                 jumpForce -= 200 * (float)gameTime.ElapsedGameTime.TotalSeconds;
@@ -47,7 +47,7 @@ namespace MoonPatrolXNA
                 if (Position.Y > inicialPositionY)
                 {
                     SetPositionY( (int)inicialPositionY);
-                    isJumping = false;
+                    jumping = false;
                     jumpForce = 0;
                 }
             }
@@ -74,7 +74,7 @@ namespace MoonPatrolXNA
 
         public void Jump()
         {
-            isJumping = true;
+            jumping = true;
             jumpForce = 200;
         }
     }
