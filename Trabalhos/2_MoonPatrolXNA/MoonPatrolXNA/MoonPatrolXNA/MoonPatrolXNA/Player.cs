@@ -57,12 +57,12 @@ namespace MoonPatrolXNA
         {
             if (Keyboard.GetState().IsKeyDown(Keys.Left))
             {
-                this.SetPositionX(Position.X - (gameTime.ElapsedGameTime.Milliseconds / 10));
+                this.SetPositionX(Position.X - gameTime.ElapsedGameTime.Milliseconds / 10);
             }
 
             if (Keyboard.GetState().IsKeyDown(Keys.Right))
             {
-                this.SetPositionX(Position.X + 1 * gameTime.ElapsedGameTime.Milliseconds / 10);
+                this.SetPositionX(Position.X + gameTime.ElapsedGameTime.Milliseconds / 10);
             }
 
             if (Position.X > maxX)

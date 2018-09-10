@@ -46,7 +46,6 @@ namespace MoonPatrolXNA
         
         protected override void Update(GameTime gameTime)
         {
-            // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
             player.Update(gameTime);
@@ -57,8 +56,10 @@ namespace MoonPatrolXNA
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.Begin();
+
             player.Draw(spriteBatch);
             chao.Draw(spriteBatch, Color.Purple);
+
             spriteBatch.End();
             base.Draw(gameTime);
         }
