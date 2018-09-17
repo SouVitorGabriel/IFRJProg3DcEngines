@@ -21,6 +21,8 @@ namespace BielWorld
         _Camera camera;
         _Quad ground;
 
+        _House house;
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -39,6 +41,8 @@ namespace BielWorld
 
             this.ground = new _Quad(GraphicsDevice, this, Color.SaddleBrown, new Vector3(0, 0, 0), new Vector2(50, 50));
             this.ground.CreateRotation("X", -90);
+
+            this.house = new _House(GraphicsDevice, this, new Vector3(-5, 0, 0), new Vector2(0, 0));
 
             base.Initialize();
         }
@@ -61,6 +65,7 @@ namespace BielWorld
                 this.Exit();
 
             this.ground.Update(gameTime);
+            this.house.Update(gameTime);
 
             base.Update(gameTime);
         }
@@ -69,7 +74,14 @@ namespace BielWorld
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
+            RasterizerState rs = new RasterizerState();
+            rs.CullMode = CullMode.None;
+            //rs.FillMode = FillMode.Solid;
+            //rs.FillMode = FillMode.WireFrame;
+            this.GraphicsDevice.RasterizerState = rs;
+
             this.ground.Draw(this.camera);
+            this.house.Draw(this.camera);
 
             base.Draw(gameTime);
         }
