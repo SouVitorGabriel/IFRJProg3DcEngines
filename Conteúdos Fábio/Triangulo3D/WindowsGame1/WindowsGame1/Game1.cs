@@ -83,10 +83,10 @@ namespace WindowsGame1
             //world *= Matrix.CreateTranslation(0.02f, 0, 0);
             world = Matrix.Identity;
 
+            world *= Matrix.CreateTranslation(1, 0, 0);
             world *= Matrix.CreateRotationY(angle);
             
-            world *= Matrix.CreateTranslation(2, 0, 0);
-            world *= Matrix.CreateScale(1, 2, 1);
+            //world *= Matrix.CreateScale(1, 2, 1);
             angle += 0.05f;
 
             base.Update(gameTime);

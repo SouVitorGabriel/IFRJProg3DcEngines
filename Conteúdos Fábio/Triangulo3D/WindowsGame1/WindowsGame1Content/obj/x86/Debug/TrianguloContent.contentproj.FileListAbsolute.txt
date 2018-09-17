@@ -1,0 +1,2 @@
+C:\Users\vitor\Documents\IFRJ\2018_2\Programacao3D\Conteúdos Fábio\Triangulo3D\WindowsGame1\WindowsGame1Content\obj\x86\Debug\TrianguloContent.contentprojAssemblyReference.cache
+C:\Users\vitor\Documents\IFRJ\2018_2\Programacao3D\Conteúdos Fábio\Triangulo3D\WindowsGame1\WindowsGame1Content\obj\x86\Debug\TrianguloContent.contentproj.CoreCompileInputs.cache

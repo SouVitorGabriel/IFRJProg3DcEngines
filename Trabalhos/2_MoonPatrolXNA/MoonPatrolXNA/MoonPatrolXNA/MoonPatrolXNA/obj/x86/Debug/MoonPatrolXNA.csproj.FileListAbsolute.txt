@@ -15,7 +15,6 @@ C:\Users\vitor\Documents\IFRJ\2018_2\Programacao3D\Trabalhos\MoonPatrolXNA\MoonP
 C:\Users\vitor\Documents\IFRJ\2018_2\Programacao3D\Trabalhos\MoonPatrolXNA\MoonPatrolXNA\MoonPatrolXNA\MoonPatrolXNA\obj\x86\Debug\MoonPatrolXNA.exe
 C:\Users\vitor\Documents\IFRJ\2018_2\Programacao3D\Trabalhos\MoonPatrolXNA\MoonPatrolXNA\MoonPatrolXNA\MoonPatrolXNA\obj\x86\Debug\MoonPatrolXNA.pdb
 C:\Users\vitor\Documents\IFRJ\2018_2\Programacao3D\Trabalhos\MoonPatrolXNA\MoonPatrolXNA\MoonPatrolXNA\MoonPatrolXNA\bin\x86\Debug\Content\filme.xnb
-C:\Users\vitor\Documents\IFRJ\2018_2\Programacao3D\Trabalhos\2_MoonPatrolXNA\MoonPatrolXNA\MoonPatrolXNA\MoonPatrolXNA\obj\x86\Debug\MoonPatrolXNA.csprojResolveAssemblyReference.cache
 C:\Users\vitor\Documents\IFRJ\2018_2\Programacao3D\Trabalhos\2_MoonPatrolXNA\MoonPatrolXNA\MoonPatrolXNA\MoonPatrolXNA\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\vitor\Documents\IFRJ\2018_2\Programacao3D\Trabalhos\2_MoonPatrolXNA\MoonPatrolXNA\MoonPatrolXNA\MoonPatrolXNA\obj\x86\Debug\MoonPatrolXNA.exe
 C:\Users\vitor\Documents\IFRJ\2018_2\Programacao3D\Trabalhos\2_MoonPatrolXNA\MoonPatrolXNA\MoonPatrolXNA\MoonPatrolXNA\obj\x86\Debug\MoonPatrolXNA.pdb
@@ -35,3 +34,6 @@ C:\Users\vitor\Documents\IFRJ\2018_2\Programacao3D\Trabalhos\2_MoonPatrolXNA\Moo
 C:\Users\vitor\Documents\IFRJ\2018_2\Programacao3D\Trabalhos\2_MoonPatrolXNA\MoonPatrolXNA\MoonPatrolXNA\MoonPatrolXNA\bin\x86\Debug\Content\blank.xnb
 C:\Users\vitor\Documents\IFRJ\2018_2\Programacao3D\Trabalhos\2_MoonPatrolXNA\MoonPatrolXNA\MoonPatrolXNA\MoonPatrolXNA\bin\x86\Debug\Content\sprite.xnb
 C:\Users\vitor\Documents\IFRJ\2018_2\Programacao3D\Trabalhos\2_MoonPatrolXNA\MoonPatrolXNA\MoonPatrolXNA\MoonPatrolXNA\bin\x86\Debug\MoonPatrolXNA.exe.config
+C:\Users\vitor\Documents\IFRJ\2018_2\Programacao3D\Trabalhos\2_MoonPatrolXNA\MoonPatrolXNA\MoonPatrolXNA\MoonPatrolXNA\obj\x86\Debug\MoonPatrolXNA.csprojAssemblyReference.cache
+C:\Users\vitor\Documents\IFRJ\2018_2\Programacao3D\Trabalhos\2_MoonPatrolXNA\MoonPatrolXNA\MoonPatrolXNA\MoonPatrolXNA\obj\x86\Debug\MoonPatrolXNA.csproj.CoreCompileInputs.cache
+C:\Users\vitor\Documents\IFRJ\2018_2\Programacao3D\Trabalhos\2_MoonPatrolXNA\MoonPatrolXNA\MoonPatrolXNA\MoonPatrolXNA\obj\x86\Debug\MoonPatrolXNA.csproj.CopyComplete
