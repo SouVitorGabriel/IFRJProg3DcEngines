@@ -92,6 +92,7 @@ namespace BielWorld
 
             else if (orient == "z" || orient == "Z")
                 this.world *= Matrix.CreateRotationZ(rValue);
+    
 
             foreach (_Quad w in walls)
             {

@@ -1,0 +1,2 @@
+C:\Users\vitor\Documents\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld\BielWorld\BielWorldContent\obj\x86\Debug\BielWorldContent.contentprojAssemblyReference.cache
+C:\Users\vitor\Documents\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld\BielWorld\BielWorldContent\obj\x86\Debug\BielWorldContent.contentproj.CoreCompileInputs.cache
