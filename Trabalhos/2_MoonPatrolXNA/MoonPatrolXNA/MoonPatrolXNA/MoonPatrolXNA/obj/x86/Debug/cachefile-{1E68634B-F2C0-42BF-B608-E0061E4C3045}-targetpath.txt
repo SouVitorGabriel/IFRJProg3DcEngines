@@ -1,3 +1,0 @@
-Content\filme.xnb
-Content\blank.xnb
-Content\sprite.xnb

@@ -100,7 +100,7 @@ namespace BielWorld
 
         public void SetMatrix(Matrix matrix)
         {
-            this.world = matrix;
+                this.world = this.world * matrix;
         }
 
         public void SetMatrixIndetity()

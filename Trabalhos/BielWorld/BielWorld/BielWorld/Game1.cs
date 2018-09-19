@@ -17,6 +17,8 @@ namespace BielWorld
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
+        private Matrix world;
+
         _Screen screen;
         _Camera camera;
         _Quad ground;
@@ -36,6 +38,7 @@ namespace BielWorld
         
         protected override void Initialize()
         {
+            this.world = Matrix.Identity;
             this.screen = _Screen.GetInstance();
             this.screen.SetWidth(graphics.PreferredBackBufferWidth);
             this.screen.SetHeight(graphics.PreferredBackBufferHeight);
@@ -48,6 +51,7 @@ namespace BielWorld
 
             this.house = new _House(GraphicsDevice, this, new Vector3(-5, 0, 0), new Vector2(0, 0));
 
+            
             base.Initialize();
         }
         
@@ -78,6 +82,11 @@ namespace BielWorld
 
             this.house.Update(gameTime);
 
+            //this.house.SetMatrixIndetity();
+            //this.house.CreateTranslation(10f, 0, 0);
+            //this.house.CreateScale(1f, 1f, 1f);
+            //this.house.CreateRotation("y", 90f);
+            
             base.Update(gameTime);
         }
         

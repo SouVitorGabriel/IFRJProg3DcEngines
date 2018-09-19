@@ -1,2 +1,0 @@
-c:\users\vitor\documents\visual studio 2017\Projects\WindowsGame1\WindowsGame1\WindowsGame1Content\obj\x86\Debug\WindowsGame1Content.contentprojResolveAssemblyReference.cache
-C:\Users\vitor\Documents\IFRJ\2018_2\Programacao3D\Conteúdos Fábio\Triangulo3D\WindowsGame1\WindowsGame1Content\obj\x86\Debug\WindowsGame1Content.contentprojResolveAssemblyReference.cache
