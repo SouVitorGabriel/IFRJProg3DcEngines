@@ -82,9 +82,9 @@ namespace WindowsGame1
             //world *= Matrix.CreateRotationZ(0.01f);
             //world *= Matrix.CreateTranslation(0.02f, 0, 0);
             world = Matrix.Identity;
-
-            world *= Matrix.CreateTranslation(1, 0, 0);
             world *= Matrix.CreateRotationY(angle);
+            world *= Matrix.CreateTranslation(1, 0, 0);
+            
             
             //world *= Matrix.CreateScale(1, 2, 1);
             angle += 0.05f;

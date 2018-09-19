@@ -75,19 +75,13 @@ namespace BielWorld
             }
         }
 
-        public void CreateTranslation(float x, float y, float z, bool identity = false)
+        public void CreateTranslation(float x, float y, float z)
         {
-            if (identity)
-                this.world = Matrix.Identity;
-
             this.world *= Matrix.CreateTranslation(x, y, z);
         }
 
-        public void CreateRotation(string orient, float value, bool identity = false)
+        public void CreateRotation(string orient, float value)
         {
-            if (identity)
-                this.world = Matrix.Identity;
-
             float rValue = MathHelper.ToRadians(value);
             if (orient == "x" || orient == "X")
                 this.world *= Matrix.CreateRotationX(rValue);
@@ -102,6 +96,16 @@ namespace BielWorld
         public void CreateScale(float x, float y, float z)
         {
             this.world *= Matrix.CreateScale(x, y, z);
+        }
+
+        public void SetMatrix(Matrix matrix)
+        {
+            this.world = matrix;
+        }
+
+        public void SetMatrixIndetity()
+        {
+            this.world = Matrix.Identity;
         }
     }
 }

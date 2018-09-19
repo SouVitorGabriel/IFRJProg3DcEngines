@@ -21,6 +21,9 @@ namespace BielWorld
         _Camera camera;
         _Quad ground;
 
+        _Quad wall;
+        float angle;
+
         _House house;
 
         public Game1()
@@ -38,6 +41,7 @@ namespace BielWorld
             this.screen.SetHeight(graphics.PreferredBackBufferHeight);
 
             this.camera = new _Camera();
+            this.wall = new _Quad(GraphicsDevice, this, Color.Black, new Vector3(-5.5f, 4f, 0), new Vector2(3f, 8f));
 
             this.ground = new _Quad(GraphicsDevice, this, Color.SaddleBrown, new Vector3(0, 0, 0), new Vector2(50, 50));
             this.ground.CreateRotation("X", -90);
@@ -65,6 +69,13 @@ namespace BielWorld
                 this.Exit();
 
             this.ground.Update(gameTime);
+            this.wall.Update(gameTime);
+            this.wall.CreateTranslation(12, 0, 0);
+            this.wall.CreateRotation("y", angle);
+            
+            angle += 2f;
+
+
             this.house.Update(gameTime);
 
             base.Update(gameTime);
@@ -81,6 +92,7 @@ namespace BielWorld
             this.GraphicsDevice.RasterizerState = rs;
 
             this.ground.Draw(this.camera);
+            //this.wall.Draw(this.camera);
             this.house.Draw(this.camera);
 
             base.Draw(gameTime);
