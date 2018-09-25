@@ -22,8 +22,7 @@ namespace BielWorld
         _Screen screen;
         _Camera camera;
         _Quad ground;
-
-        _Quad wall;
+        
         float angle;
 
         _House house;
@@ -44,10 +43,9 @@ namespace BielWorld
             this.screen.SetHeight(graphics.PreferredBackBufferHeight);
 
             this.camera = new _Camera();
-            this.wall = new _Quad(GraphicsDevice, this, Color.Black, new Vector3(-5.5f, 4f, 0), new Vector2(3f, 8f));
-
-            this.ground = new _Quad(GraphicsDevice, this, Color.SaddleBrown, new Vector3(0, 0, 0), new Vector2(50, 50));
-            this.ground.CreateRotation("X", -90);
+            
+            this.ground = new _Quad(GraphicsDevice, this, Color.SaddleBrown, new Vector3(0, 0, 0), new Vector2(50, 50), _WallOrientation.Up);
+            //this.ground.CreateRotation("X", -90);
 
             this.house = new _House(GraphicsDevice, this, new Vector3(-5, 0, 0), new Vector2(0, 0));
 
@@ -73,11 +71,8 @@ namespace BielWorld
                 this.Exit();
 
             this.ground.Update(gameTime);
-            this.wall.Update(gameTime);
-            this.wall.CreateTranslation(12, 0, 0);
-            this.wall.CreateRotation("y", angle);
             
-            angle += 2f;
+            angle += 5f;
 
 
             this.house.Update(gameTime);
@@ -85,8 +80,10 @@ namespace BielWorld
             //this.house.SetMatrixIndetity();
             //this.house.CreateTranslation(10f, 0, 0);
             //this.house.CreateScale(1f, 1f, 1f);
-            //this.house.CreateRotation("y", 90f);
-            
+            //this.ground.SetMatrixIndetity();
+            //this.ground.CreateRotation("y", angle);
+            //this.ground.CreateTranslation(8f, 0, 0);
+
             base.Update(gameTime);
         }
         
@@ -95,13 +92,12 @@ namespace BielWorld
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             RasterizerState rs = new RasterizerState();
-            rs.CullMode = CullMode.None;
-            //rs.FillMode = FillMode.Solid;
+            //rs.CullMode = CullMode.None;
+            rs.FillMode = FillMode.Solid;
             //rs.FillMode = FillMode.WireFrame;
             this.GraphicsDevice.RasterizerState = rs;
 
             this.ground.Draw(this.camera);
-            //this.wall.Draw(this.camera);
             this.house.Draw(this.camera);
 
             base.Draw(gameTime);

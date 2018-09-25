@@ -16,19 +16,42 @@ namespace BielWorld
         private VertexBuffer buffer;
         private BasicEffect effect;
 
-        public _Quad(GraphicsDevice device, Game game, Color color, Vector3 position, Vector2 size)
+        private _WallOrientation wallOrientation;
+
+        Vector3 v0;
+        Vector3 v1;
+        Vector3 v2;
+        Vector3 v3;
+        Vector3 v4;
+        Vector3 v5;
+
+        public _Quad(GraphicsDevice device, Game game, Color color, Vector3 position, Vector2 size, _WallOrientation orientation)
         {
             this.game = game;
             this.device = device;
             this.world = Matrix.Identity;
 
-            Vector3 v0 = new Vector3(position.X - (size.X / 2), position.Y + (size.Y / 2), position.Z);
-            Vector3 v1 = new Vector3(position.X + (size.X / 2), position.Y + (size.Y / 2), position.Z);
-            Vector3 v2 = new Vector3(position.X - (size.X / 2), position.Y - (size.Y / 2), position.Z);
-
-            Vector3 v3 = v1;
-            Vector3 v4 = new Vector3(position.X + (size.X / 2), position.Y - (size.Y / 2), position.Z);
-            Vector3 v5 = v2;
+            switch (orientation)
+            {
+                case _WallOrientation.South:
+                    isSouth(position, size);
+                    break;
+                case _WallOrientation.North:
+                    isNorth(position, size);
+                    break;
+                case _WallOrientation.East:
+                    isEast(position, size);
+                    break;
+                case _WallOrientation.West:
+                    isWest(position, size);
+                    break;
+                case _WallOrientation.Up:
+                    isUp(position, size);
+                    break;
+                case _WallOrientation.Down:
+                    isDown(position, size);
+                    break;
+            }
 
             this.verts = new VertexPositionColor[]
             {
@@ -106,6 +129,74 @@ namespace BielWorld
         public void SetMatrixIndetity()
         {
             this.world = Matrix.Identity;
+        }
+
+        public void isSouth(Vector3 position, Vector2 size)
+        {
+            v0 = new Vector3(position.X - (size.X /2), position.Y + (size.Y / 2), position.Z);
+            v1 = new Vector3(position.X + (size.X / 2), position.Y + (size.Y / 2), position.Z);
+            v2 = new Vector3(position.X - (size.X / 2), position.Y - (size.Y / 2), position.Z);
+
+            v3 = v1;
+            v4 = new Vector3(position.X + (size.X / 2), position.Y - (size.Y / 2), position.Z);
+            v5 = v2;
+        }
+
+        public void isNorth(Vector3 position, Vector2 size)
+        {
+            v0 = new Vector3(position.X - (size.X / 2), position.Y + (size.Y / 2), position.Z);
+            v1 = new Vector3(position.X - (size.X / 2), position.Y - (size.Y / 2), position.Z);
+            v2 = new Vector3(position.X + (size.X / 2), position.Y + (size.Y / 2), position.Z);
+            
+
+            v3 = v1;
+            v4 = new Vector3(position.X + (size.X / 2), position.Y - (size.Y / 2), position.Z);
+            v5 = v2;
+        }
+
+        public void isEast(Vector3 position, Vector2 size)
+        {
+            v0 = new Vector3(position.X, position.Y + (size.Y / 2), position.Z + (size.X / 2));
+            v1 = new Vector3(position.X, position.Y + (size.Y / 2), position.Z - (size.X / 2));
+            v2 = new Vector3(position.X, position.Y - (size.Y / 2), position.Z + (size.X / 2));
+
+            v3 = v1;
+            v4 = new Vector3(position.X, position.Y - (size.Y / 2), position.Z - (size.X / 2));
+            v5 = v2;
+        }
+
+        public void isWest(Vector3 position, Vector2 size)
+        {
+            v0 = new Vector3(position.X, position.Y + (size.Y / 2), position.Z + (size.X / 2));
+            v1 = new Vector3(position.X, position.Y - (size.Y / 2), position.Z + (size.X / 2));
+            v2 = new Vector3(position.X, position.Y + (size.Y / 2), position.Z - (size.X / 2));
+            
+
+            v3 = v1;
+            v4 = new Vector3(position.X, position.Y - (size.Y / 2), position.Z - (size.X / 2));
+            v5 = v2;
+        }
+
+        public void isUp(Vector3 position, Vector2 size)
+        {
+            v0 = new Vector3(position.X - (size.X / 2), position.Y, position.Z - (size.Y / 2));
+            v1 = new Vector3(position.X + (size.X / 2), position.Y, position.Z - (size.Y / 2));
+            v2 = new Vector3(position.X - (size.X / 2), position.Y, position.Z + (size.Y / 2));
+
+            v3 = v1;
+            v4 = new Vector3(position.X + (size.X / 2), position.Y, position.Z + (size.Y / 2));
+            v5 = v2;
+        }
+
+        public void isDown(Vector3 position, Vector2 size)
+        {
+            v0 = new Vector3(position.X - (size.X / 2), position.Y, position.Z - (size.Y / 2));
+            v1 = new Vector3(position.X - (size.X / 2), position.Y, position.Z + (size.Y / 2));
+            v2 = new Vector3(position.X + (size.X / 2), position.Y, position.Z - (size.Y / 2));
+
+            v3 = v1;
+            v4 = new Vector3(position.X + (size.X / 2), position.Y, position.Z + (size.Y / 2));
+            v5 = v2;
         }
     }
 }

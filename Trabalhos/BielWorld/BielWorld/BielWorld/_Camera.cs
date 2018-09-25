@@ -17,7 +17,7 @@ namespace BielWorld
 
         public _Camera()
         {
-            this.position = new Vector3(0, 5, 50);
+            this.position = new Vector3(-15, 5, 50);
             this.target = Vector3.Zero;
             this.up = Vector3.Up;
             this.SetupView(this.position, this.target, this.up);

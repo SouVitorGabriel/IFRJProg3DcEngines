@@ -8,15 +8,15 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\vitor\Documents\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld\BielWorld\BielWorldContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\vitor\Documents\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld\BielWorld\BielWorld\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\vitor\Documents\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld\BielWorld\BielWorld\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\vitor\Documents\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld\BielWorld\BielWorld\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld\BielWorld\BielWorldContent\</RootDirectory>
+      <LoggerRootDirectory>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld\BielWorld\BielWorld\</LoggerRootDirectory>
+      <IntermediateDirectory>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld\BielWorld\BielWorld\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld\BielWorld\BielWorld\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
-        <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2018-05-24T15:24:11.7672962-03:00</Value>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2018-09-23T18:37:32.6825895-03:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

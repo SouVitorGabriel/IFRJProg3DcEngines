@@ -17,23 +17,24 @@ namespace BielWorld
 
         private float number;
 
-        public _House(GraphicsDevice device, Game game, Vector3 position, Vector2 size)
+        public _House(GraphicsDevice graphicDevice, Game game, Vector3 position, Vector2 size)
         {
             Color color = Color.Blue;
             this.game = game;
-            this.device = device;
+            this.device = graphicDevice;
             this.world = Matrix.Identity;
 
             walls = new _Quad[]
             {
-                new _Quad(this.device, this.game, Color.Red, new Vector3(-1.5f, 0f, 0), new Vector2(3f,6f)), //porta
+                //porta
+                new _Quad(this.device, this.game, Color.Red, new Vector3(1.5f, 3f, 0), new Vector2(3f, 6f), _WallOrientation.South), //porta
 
-                new _Quad(this.device, this.game, color, new Vector3(0,7f,0), new Vector2(3f,2f)), //parede frente; acima
-                new _Quad(this.device, this.game, color, new Vector3(-3.5f,4f,0), new Vector2(4f,8f)), //parede frente; esquerda
-                new _Quad(this.device, this.game, color, new Vector3(3.5f,4f,0), new Vector2(4f,8f)), //parece frente; direita
+                new _Quad(this.device, this.game, color, new Vector3(0,7f,0), new Vector2(3,2), _WallOrientation.South), //parede frente; acima
+                //new _Quad(this.device, this.game, color, new Vector3(-5.5f,8f,0), new Vector3(-1.5f,0,0)), //parede frente; esquerda
+                ////new _Quad(this.device, this.game, color, new Vector3(3.5f,4f,0), new Vector2(4f,8f)), //parece frente; direita
 
-                new _Quad(this.device, this.game, Color.Orange, new Vector3(0,0,0), new Vector2(3f,8f)), //parede esquerda; 1
-                new _Quad(this.device, this.game, Color.HotPink, new Vector3(0,0,0), new Vector2(3f,4f)) //janela esquerda; 1
+                //new _Quad(this.device, this.game, Color.Orange, new Vector3(-10.5f,0f,-3f), new Vector3(-5.5f,8f,0)), //parede esquerda; 1
+                ////new _Quad(this.device, this.game, Color.HotPink, new Vector3(0,0,-10f), new Vector2(3f,4f)) //janela esquerda; 1
 
             };
         }
@@ -44,21 +45,23 @@ namespace BielWorld
             {
                 w.SetMatrixIndetity();
             }
-
-            walls[0].SetMatrixIndetity();
-            walls[0].CreateTranslation(0, 3f, 0);
+            
+            //walls[0].CreateTranslation(-1.5f, 0, 0);
             walls[0].CreateRotation("y", number);
             walls[0].CreateTranslation(1.5f, 0, 0);
             
-            walls[4].SetMatrixIndetity();
-            walls[4].CreateRotation("y", 90f);
-            walls[4].CreateTranslation(0, 4f, 0);
-            walls[4].CreateTranslation(-5.5f, 0, -1.5f);
+            //walls[4].SetMatrixIndetity();
+            //walls[4].CreateRotation("y", 90f);
+            //walls[4].CreateTranslation(0, 4f, 0);
+            //walls[4].CreateTranslation(-5.5f, 0, -1.5f);
             
-            walls[5].SetMatrixIndetity();
-            walls[5].CreateRotation("y", 90f);
-            walls[5].CreateTranslation(0, 4f, 0);
-            walls[5].CreateTranslation(-5.5f, 0, -4.5f);
+            //walls[5].SetMatrixIndetity();
+            //walls[5].CreateRotation("y", number);
+            //walls[5].CreateTranslation(0, 4f, 0);
+            //walls[5].CreateTranslation(-5.5f, 0, -4.5f);
+            //walls[5].CreateRotation("y", number);
+            //walls[5].CreateTranslation(+5.5f, 0, +4.5f);
+
             //walls[0].CreateTranslation(2.75f, 0, 0);
             number += 2f;
         }
