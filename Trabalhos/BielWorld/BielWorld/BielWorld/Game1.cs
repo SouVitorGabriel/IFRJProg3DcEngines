@@ -24,8 +24,9 @@ namespace BielWorld
         _Quad ground;
         
         float angle;
+        bool wireframe, culling, pressed, pressed1;
 
-        _House house;
+        _House house, house1;
 
         public Game1()
         {
@@ -44,12 +45,12 @@ namespace BielWorld
 
             this.camera = new _Camera();
             
-            this.ground = new _Quad(GraphicsDevice, this, Color.SaddleBrown, new Vector3(0, 0, 0), new Vector2(50, 50), _WallOrientation.Up);
+            this.ground = new _Quad(GraphicsDevice, this, Color.SaddleBrown, new Vector3(0, 0, 0), new Vector2(70, 70), _WallOrientation.Up);
             //this.ground.CreateRotation("X", -90);
 
-            this.house = new _House(GraphicsDevice, this, new Vector3(-5, 0, 0), new Vector2(0, 0));
+            this.house = new _House(GraphicsDevice, this, new Vector3(0, 0, 0), new Vector2(0, 0));
+            this.house1 = new _House(GraphicsDevice, this, new Vector3(-5, 0, 0), new Vector2(0, 0));
 
-            
             base.Initialize();
         }
         
@@ -70,12 +71,39 @@ namespace BielWorld
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
+            if (Keyboard.GetState().IsKeyDown(Keys.D1) && !pressed)
+            {
+                pressed = true;
+                wireframe = !wireframe;
+            }
+            if (Keyboard.GetState().IsKeyUp(Keys.D1))
+                pressed = false;
+
+
+            if (Keyboard.GetState().IsKeyDown(Keys.D2) && !pressed1)
+            {
+                pressed1 = true;
+                culling = !culling;
+            }
+            if (Keyboard.GetState().IsKeyUp(Keys.D2))
+                pressed1 = false;
+
+
+
             this.ground.Update(gameTime);
             
             angle += 5f;
 
 
             this.house.Update(gameTime);
+            this.house.SetMatrixIndetity();
+            this.house.CreateTranslation(0, 0, 10);
+
+            this.house1.Update(gameTime);
+            this.house1.SetMatrixIndetity();
+            this.house1.CreateScale(1.5f, 1.5f, 1.5f);
+            this.house1.CreateRotation("y", 45f);
+            this.house1.CreateTranslation(-120, 0, -50);
 
             //this.house.SetMatrixIndetity();
             //this.house.CreateTranslation(10f, 0, 0);
@@ -92,13 +120,18 @@ namespace BielWorld
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             RasterizerState rs = new RasterizerState();
-            //rs.CullMode = CullMode.None;
+            if(culling)
+            rs.CullMode = CullMode.None;
+
             rs.FillMode = FillMode.Solid;
-            //rs.FillMode = FillMode.WireFrame;
+
+            if(wireframe)
+            rs.FillMode = FillMode.WireFrame;
             this.GraphicsDevice.RasterizerState = rs;
 
             this.ground.Draw(this.camera);
             this.house.Draw(this.camera);
+            this.house1.Draw(this.camera);
 
             base.Draw(gameTime);
         }
