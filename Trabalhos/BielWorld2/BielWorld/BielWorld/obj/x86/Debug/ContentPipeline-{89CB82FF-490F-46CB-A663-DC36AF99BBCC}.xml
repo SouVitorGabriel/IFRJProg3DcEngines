@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <ContentProjectGUID>{89CB82FF-490F-46CB-A663-DC36AF99BBCC}</ContentProjectGUID>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>Reach</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld2\BielWorld\BielWorldContent\</RootDirectory>
+      <LoggerRootDirectory>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld2\BielWorld\BielWorld\</LoggerRootDirectory>
+      <IntermediateDirectory>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld2\BielWorld\BielWorld\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld2\BielWorld\BielWorld\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2018-09-23T18:37:32.6825895-03:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>

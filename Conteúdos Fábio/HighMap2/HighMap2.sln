@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HighMap2", "HighMap2\HighMap2\HighMap2.csproj", "{EF88C43B-544F-4F1B-9C6C-08202495F4B6}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "HighMap2Content", "HighMap2\HighMap2Content\HighMap2Content.contentproj", "{862468EA-5E32-4269-B296-2089922B4127}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Windows Phone = Debug|Windows Phone
+		Release|Windows Phone = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF88C43B-544F-4F1B-9C6C-08202495F4B6}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{EF88C43B-544F-4F1B-9C6C-08202495F4B6}.Debug|Windows Phone.Build.0 = Debug|Windows Phone
+		{EF88C43B-544F-4F1B-9C6C-08202495F4B6}.Debug|Windows Phone.Deploy.0 = Debug|Windows Phone
+		{EF88C43B-544F-4F1B-9C6C-08202495F4B6}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+		{EF88C43B-544F-4F1B-9C6C-08202495F4B6}.Release|Windows Phone.Build.0 = Release|Windows Phone
+		{EF88C43B-544F-4F1B-9C6C-08202495F4B6}.Release|Windows Phone.Deploy.0 = Release|Windows Phone
+		{862468EA-5E32-4269-B296-2089922B4127}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{862468EA-5E32-4269-B296-2089922B4127}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D3933A75-EAC5-4BE1-B97B-B278DF9CC6D2}
+	EndGlobalSection
+EndGlobal

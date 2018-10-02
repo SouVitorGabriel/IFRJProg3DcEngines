@@ -103,9 +103,9 @@ namespace BielWorld
             this.world *= Matrix.CreateTranslation(x, y, z);
         }
 
-        public void CreateRotation(_TransformOrientation orient, float value)
+        public void CreateRotation(_TransformOrientation orient, float valueDegrees)
         {
-            float rValue = MathHelper.ToRadians(value);
+            float rValue = MathHelper.ToRadians(valueDegrees);
             if (orient == _TransformOrientation.X)
                 this.world *= Matrix.CreateRotationX(rValue);
 
