@@ -8,10 +8,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Release</BuildConfiguration>
       <CompressContent>true</CompressContent>
-      <RootDirectory>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld\BielWorld\BielWorldContent\</RootDirectory>
-      <LoggerRootDirectory>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld\BielWorld\BielWorld\</LoggerRootDirectory>
-      <IntermediateDirectory>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld\BielWorld\BielWorld\obj\x86\Release\</IntermediateDirectory>
-      <OutputDirectory>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld\BielWorld\BielWorld\bin\x86\Release\Content\</OutputDirectory>
+      <RootDirectory>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld2\BielWorld\BielWorldContent\</RootDirectory>
+      <LoggerRootDirectory>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld2\BielWorld\BielWorld\</LoggerRootDirectory>
+      <IntermediateDirectory>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld2\BielWorld\BielWorld\obj\x86\Release\</IntermediateDirectory>
+      <OutputDirectory>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld2\BielWorld\BielWorld\bin\x86\Release\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

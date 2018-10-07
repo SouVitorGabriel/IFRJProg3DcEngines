@@ -14,10 +14,14 @@ namespace BielWorld
         private Matrix world;
 
         private _Quad[] sides;
-
-        private _Helix backHelix, topHelix;
+        private _Quad[] backHelixSides, topHelixSides;
 
         private float angle;
+        private float aux;
+
+        _MachineState state = _MachineState.Off;
+
+        bool helixOn;
 
         public _Helicopter(GraphicsDevice graphicDevice, Game game)
         {
@@ -100,15 +104,30 @@ namespace BielWorld
                 new _Quad(this.device, this.game, Color.DarkMagenta, new Vector3(0, 3f, -6f), new Vector2(10, 12), _WallOrientation.Up), //assoalho 
             };
 
-            this.backHelix = new _Helix(device, game);
-            this.topHelix = new _Helix(device, game, 1);
+            this.backHelixSides = new _Quad[]
+                {
+                    new _Quad(this.device, this.game, Color.Red, new Vector3(0,0,0), new Vector2(0.5f, 3f), _WallOrientation.East),
+                    new _Quad(this.device, this.game, Color.Red, new Vector3(0,0,0), new Vector2(3f, 0.5f), _WallOrientation.East),
+                    new _Quad(this.device, this.game, Color.Red, new Vector3(0,0,0), new Vector2(0.5f, 3f), _WallOrientation.West),
+                    new _Quad(this.device, this.game, Color.Red, new Vector3(0,0,0), new Vector2(3f, 0.5f), _WallOrientation.West),
+                };
+
+            this.topHelixSides = new _Quad[]
+                {
+                    new _Quad(this.device, this.game, Color.Red, new Vector3(0,0,0), new Vector2(16f, 1f), _WallOrientation.Up),
+                    new _Quad(this.device, this.game, Color.Red, new Vector3(0,0,0), new Vector2(1f, 16f), _WallOrientation.Down),
+                    new _Quad(this.device, this.game, Color.Red, new Vector3(0,0,0), new Vector2(16f, 1f), _WallOrientation.Down),
+                    new _Quad(this.device, this.game, Color.Red, new Vector3(0,0,0), new Vector2(1f, 16f), _WallOrientation.Up),
+
+                    new _Quad(this.device, this.game, Color.Red, new Vector3(0,-1,0), new Vector2(1f, 2f), _WallOrientation.West),
+                    new _Quad(this.device, this.game, Color.Red, new Vector3(0,-1,0), new Vector2(1f, 2f), _WallOrientation.East),
+                    new _Quad(this.device, this.game, Color.Red, new Vector3(0,-1,0), new Vector2(1f, 2f), _WallOrientation.North),
+                    new _Quad(this.device, this.game, Color.Red, new Vector3(0,-1,0), new Vector2(1f, 2f), _WallOrientation.South),
+                };
         }
 
-        public void Update()
+        public void Update(GameTime gameTime)
         {
-            this.backHelix.Update();
-            this.topHelix.Update();
-            angle += 5f;
             foreach (_Quad w in sides)
             {
                 w.SetMatrixIndetity();
@@ -126,22 +145,83 @@ namespace BielWorld
             this.sides[15].CreateRotation(_TransformOrientation.X, -45);
             this.sides[15].CreateTranslation(5, 8.25f, -2.75f);
 
-            this.backHelix.SetMatrixIndetity();
-            this.backHelix.CreateRotation(_TransformOrientation.X, angle);
-            this.backHelix.CreateTranslation(1, 6.5f, -24.5f);
+            angle += 4f;
+            foreach (_Quad w in backHelixSides)
+            {
+                w.SetMatrixIndetity();
+                if (helixOn)
+                    w.CreateRotation(_TransformOrientation.X, angle);
+                w.CreateTranslation(1, 6.5f, -24.5f);
+            }
 
-            this.topHelix.SetMatrixIndetity();
-            this.topHelix.CreateRotation(_TransformOrientation.Y, angle);
-            this.topHelix.CreateTranslation(0, 11.5f, -6f);
+            foreach (_Quad w in topHelixSides)
+            {
+                w.SetMatrixIndetity();
+                if (helixOn)
+                    w.CreateRotation(_TransformOrientation.Y, angle);
+                w.CreateTranslation(0, 12.5f, -6f);
+            }
 
+            //maquina de estados
+            switch (state)
+            {
+                case _MachineState.Off:
+                    helixOn = false;
+                    aux += gameTime.ElapsedGameTime.Milliseconds * 0.0008f;
+                    if (aux >= 5)
+                    {
+                        state = _MachineState.On;
+                    }
+                    break;
 
+                case _MachineState.On:
+                    helixOn = true;
+                    aux -= gameTime.ElapsedGameTime.Milliseconds * 0.0008f;
+                    if (aux <= 0)
+                    {
+                        state = _MachineState.FlyingUp;
+                    }
+                    break;
+
+                case _MachineState.FlyingUp:
+                    helixOn = true;
+                    this.CreateTranslation(0, aux, 0);
+
+                    aux += gameTime.ElapsedGameTime.Milliseconds * 0.0008f;
+                    if (aux >= 5)
+                    {
+                        state = _MachineState.FlyingDown;
+                    }
+                    break;
+
+                case _MachineState.FlyingDown:
+                    helixOn = true;
+                    this.CreateTranslation(0, aux, 0);
+                    aux -= gameTime.ElapsedGameTime.Milliseconds * 0.0008f;
+                    if (aux <= 0)
+                    {
+                        state = _MachineState.Off;
+                    }
+                    break;
+
+                default:
+                    state = _MachineState.Off;
+                    break;
+            }
+            //fim maquina de estados
         }
 
         public void Draw(_Camera camera)
         {
-            this.backHelix.Draw(camera);
-            this.topHelix.Draw(camera);
             foreach (_Quad w in sides)
+            {
+                w.Draw(camera);
+            }
+            foreach (_Quad w in backHelixSides)
+            {
+                w.Draw(camera);
+            }
+            foreach (_Quad w in topHelixSides)
             {
                 w.Draw(camera);
             }
@@ -153,6 +233,14 @@ namespace BielWorld
             this.world *= Matrix.CreateTranslation(x, y, z);
 
             foreach (_Quad w in sides)
+            {
+                w.SetMatrix(this.world);
+            }
+            foreach (_Quad w in backHelixSides)
+            {
+                w.SetMatrix(this.world);
+            }
+            foreach (_Quad w in topHelixSides)
             {
                 w.SetMatrix(this.world);
             }
@@ -174,6 +262,14 @@ namespace BielWorld
             {
                 w.SetMatrix(this.world);
             }
+            foreach (_Quad w in backHelixSides)
+            {
+                w.SetMatrix(this.world);
+            }
+            foreach (_Quad w in topHelixSides)
+            {
+                w.SetMatrix(this.world);
+            }
         }
 
         public void CreateScale(float x, float y, float z)
@@ -181,6 +277,14 @@ namespace BielWorld
             this.world *= Matrix.CreateScale(x, y, z);
 
             foreach (_Quad w in sides)
+            {
+                w.SetMatrix(this.world);
+            }
+            foreach (_Quad w in backHelixSides)
+            {
+                w.SetMatrix(this.world);
+            }
+            foreach (_Quad w in topHelixSides)
             {
                 w.SetMatrix(this.world);
             }

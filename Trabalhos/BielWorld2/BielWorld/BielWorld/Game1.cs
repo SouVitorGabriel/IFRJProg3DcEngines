@@ -26,7 +26,7 @@ namespace BielWorld
         float angle;
         bool wireframe, culling, pressed, pressed1;
 
-        _House house, house1;
+        _House house;
         _Helicopter helicopter;
 
         public Game1()
@@ -46,15 +46,11 @@ namespace BielWorld
 
             this.camera = new _Camera();
             
-            this.ground = new _Quad(GraphicsDevice, this, Color.SaddleBrown, new Vector3(0, 0, 0), new Vector2(70, 70), _WallOrientation.Up);
-            //this.ground.CreateRotation("X", -90);
-
+            this.ground = new _Quad(GraphicsDevice, this, Color.SaddleBrown, new Vector3(0, 0, 0), new Vector2(120, 120), _WallOrientation.Up);
+           
             this.house = new _House(GraphicsDevice, this);
-            this.house1 = new _House(GraphicsDevice, this);
 
             this.helicopter = new _Helicopter(GraphicsDevice, this);
-            this.helicopter.CreateTranslation(0, 0, 10f);
-            
 
             base.Initialize();
         }
@@ -97,28 +93,16 @@ namespace BielWorld
 
             this.ground.Update(gameTime);
             
-            angle += 5f;
+            angle += 0.5f;
 
 
-            this.house.Update(gameTime);
             this.house.SetMatrixIndetity();
-            this.house.CreateTranslation(0, 0, 10);
+            this.house.Update(gameTime);
+            this.house.CreateScale(1.5f, 1.5f, 1.5f);
 
-            this.house1.Update(gameTime);
-            this.house1.SetMatrixIndetity();
-            this.house1.CreateScale(1.5f, 1.5f, 1.5f);
-            this.house1.CreateRotation("y", 45f);
-            this.house1.CreateTranslation(-120, 0, -50);
-
-            this.helicopter.Update();
-            //this.helicopter.CreateTranslation(0, 10f, 0);
-
-            //this.house.SetMatrixIndetity();
-            //this.house.CreateTranslation(10f, 0, 0);
-            //this.house.CreateScale(1f, 1f, 1f);
-            //this.ground.SetMatrixIndetity();
-            //this.ground.CreateRotation("y", angle);
-            //this.ground.CreateTranslation(8f, 0, 0);
+            this.helicopter.SetMatrixIndetity();
+            this.helicopter.Update(gameTime);
+            this.helicopter.CreateTranslation(0, 12.5f, 0);
 
             base.Update(gameTime);
         }
@@ -138,8 +122,7 @@ namespace BielWorld
             this.GraphicsDevice.RasterizerState = rs;
 
             this.ground.Draw(this.camera);
-            //this.house.Draw(this.camera);
-            this.house1.Draw(this.camera);
+            this.house.Draw(this.camera);
             this.helicopter.Draw(this.camera);
 
             base.Draw(gameTime);

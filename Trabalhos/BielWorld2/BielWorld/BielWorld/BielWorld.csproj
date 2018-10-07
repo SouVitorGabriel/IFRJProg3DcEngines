@@ -72,7 +72,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="_Helicopter.cs" />
-    <Compile Include="_Helix.cs" />
+    <Compile Include="_MachineState.cs" />
     <Compile Include="_TransformOrientation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />

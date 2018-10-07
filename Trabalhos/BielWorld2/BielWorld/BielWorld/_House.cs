@@ -116,18 +116,17 @@ namespace BielWorld
             }
         }
 
-        public void CreateRotation(string orient, float valueDegrees)
+        public void CreateRotation(_TransformOrientation orient, float valueDegrees)
         {
             float rValue = MathHelper.ToRadians(valueDegrees);
-            if (orient == "x" || orient == "X")
+            if (orient == _TransformOrientation.X)
                 this.world *= Matrix.CreateRotationX(rValue);
 
-            else if (orient == "y" || orient == "Y")
+            else if (orient == _TransformOrientation.Y)
                 this.world *= Matrix.CreateRotationY(rValue);
 
-            else if (orient == "z" || orient == "Z")
+            else if (orient == _TransformOrientation.Z)
                 this.world *= Matrix.CreateRotationZ(rValue);
-    
 
             foreach (_Quad w in walls)
             {

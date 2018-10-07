@@ -16,8 +16,6 @@ namespace BielWorld
         private VertexBuffer buffer;
         private BasicEffect effect;
 
-        private _WallOrientation wallOrientation;
-
         Vector3 v0;
         Vector3 v1;
         Vector3 v2;
