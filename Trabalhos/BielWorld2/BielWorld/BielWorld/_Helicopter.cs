@@ -17,7 +17,7 @@ namespace BielWorld
         private _Quad[] backHelixSides, topHelixSides;
 
         private float angle;
-        private float aux;
+        private float aux, aux2;
 
         _MachineState state = _MachineState.Off;
 
@@ -190,7 +190,19 @@ namespace BielWorld
                     aux += gameTime.ElapsedGameTime.Milliseconds * 0.0008f;
                     if (aux >= 5)
                     {
+                        state = _MachineState.Flying;
+                    }
+                    break;
+
+                case _MachineState.Flying:
+                    helixOn = true;
+                    this.CreateTranslation(0, aux, 0);
+                    
+                    aux2 += gameTime.ElapsedGameTime.Milliseconds * 0.0008f;
+                    if (aux2 >= 5)
+                    {
                         state = _MachineState.FlyingDown;
+                        aux2 = 0;
                     }
                     break;
 

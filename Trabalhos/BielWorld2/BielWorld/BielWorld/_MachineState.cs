@@ -5,6 +5,7 @@
         Off,
         On,
         FlyingUp,
-        FlyingDown
+        FlyingDown,
+        Flying
     }
 }
