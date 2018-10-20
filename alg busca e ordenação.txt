@@ -1,0 +1,27 @@
+Bubblesort
+	algoritmo idiota
+	feito para alunos
+
+MergeSort
+	dividir-para-conquistar
+	magia
+
+Quicksort*
+	qsort
+	heapsort
+
+insertion sort
+selection ||
+median ||
+counting ||
+bucke ||
+hash ||
+
+
+3 Pilares dos algortimos de busca 
+	existencia
+	recuperaçao
+	associação
+
+Sequential Search (linear search )
+binary tree search

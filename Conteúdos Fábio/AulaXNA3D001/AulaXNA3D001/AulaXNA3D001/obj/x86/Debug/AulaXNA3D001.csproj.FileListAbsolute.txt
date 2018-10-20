@@ -10,3 +10,10 @@ C:\Users\vitor\Documents\IFRJ\2018_2\Programacao3D\Conteúdos Fábio\AulaXNA3D00
 C:\Users\vitor\Documents\IFRJ\2018_2\Programacao3D\Conteúdos Fábio\AulaXNA3D001\AulaXNA3D001\AulaXNA3D001\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\vitor\Documents\IFRJ\2018_2\Programacao3D\Conteúdos Fábio\AulaXNA3D001\AulaXNA3D001\AulaXNA3D001\obj\x86\Debug\AulaXNA3D001.exe
 C:\Users\vitor\Documents\IFRJ\2018_2\Programacao3D\Conteúdos Fábio\AulaXNA3D001\AulaXNA3D001\AulaXNA3D001\obj\x86\Debug\AulaXNA3D001.pdb
+E:\Documentos\IFRJ\2018_2\Programacao3D\Conteúdos Fábio\AulaXNA3D001\AulaXNA3D001\AulaXNA3D001\bin\x86\Debug\AulaXNA3D001.exe
+E:\Documentos\IFRJ\2018_2\Programacao3D\Conteúdos Fábio\AulaXNA3D001\AulaXNA3D001\AulaXNA3D001\bin\x86\Debug\AulaXNA3D001.pdb
+E:\Documentos\IFRJ\2018_2\Programacao3D\Conteúdos Fábio\AulaXNA3D001\AulaXNA3D001\AulaXNA3D001\obj\x86\Debug\AulaXNA3D001.csprojAssemblyReference.cache
+E:\Documentos\IFRJ\2018_2\Programacao3D\Conteúdos Fábio\AulaXNA3D001\AulaXNA3D001\AulaXNA3D001\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+E:\Documentos\IFRJ\2018_2\Programacao3D\Conteúdos Fábio\AulaXNA3D001\AulaXNA3D001\AulaXNA3D001\obj\x86\Debug\AulaXNA3D001.csproj.CoreCompileInputs.cache
+E:\Documentos\IFRJ\2018_2\Programacao3D\Conteúdos Fábio\AulaXNA3D001\AulaXNA3D001\AulaXNA3D001\obj\x86\Debug\AulaXNA3D001.exe
+E:\Documentos\IFRJ\2018_2\Programacao3D\Conteúdos Fábio\AulaXNA3D001\AulaXNA3D001\AulaXNA3D001\obj\x86\Debug\AulaXNA3D001.pdb
