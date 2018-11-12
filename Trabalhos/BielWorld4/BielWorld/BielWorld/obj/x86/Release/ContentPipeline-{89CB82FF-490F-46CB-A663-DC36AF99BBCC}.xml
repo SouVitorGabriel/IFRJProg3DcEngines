@@ -7,7 +7,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld3\BielWorld\BielWorld\bin\x86\Release\Content\Textures\parede.xnb</Output>
+      <Output>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld4\BielWorld\BielWorld\bin\x86\Release\Content\Textures\parede.xnb</Output>
       <Time>2018-10-20T15:12:23.5377785-03:00</Time>
     </Item>
     <Item>
@@ -16,7 +16,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld3\BielWorld\BielWorld\bin\x86\Release\Content\Textures\porta.xnb</Output>
+      <Output>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld4\BielWorld\BielWorld\bin\x86\Release\Content\Textures\porta.xnb</Output>
       <Time>2018-10-20T15:12:23.5277942-03:00</Time>
     </Item>
     <Item>
@@ -25,7 +25,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld3\BielWorld\BielWorld\bin\x86\Release\Content\Textures\rec.xnb</Output>
+      <Output>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld4\BielWorld\BielWorld\bin\x86\Release\Content\Textures\rec.xnb</Output>
       <Time>2018-10-20T15:12:23.5327857-03:00</Time>
     </Item>
     <Item>
@@ -34,7 +34,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld3\BielWorld\BielWorld\bin\x86\Release\Content\Textures\teto.xnb</Output>
+      <Output>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld4\BielWorld\BielWorld\bin\x86\Release\Content\Textures\teto.xnb</Output>
       <Time>2018-10-20T15:18:37.8294703-03:00</Time>
     </Item>
     <Item>
@@ -43,7 +43,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld3\BielWorld\BielWorld\bin\x86\Release\Content\Textures\helix.xnb</Output>
+      <Output>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld4\BielWorld\BielWorld\bin\x86\Release\Content\Textures\helix.xnb</Output>
       <Time>2018-10-20T15:23:09.2213275-03:00</Time>
     </Item>
     <Item>
@@ -52,7 +52,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld3\BielWorld\BielWorld\bin\x86\Release\Content\Textures\helicop.xnb</Output>
+      <Output>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld4\BielWorld\BielWorld\bin\x86\Release\Content\Textures\helicop.xnb</Output>
       <Time>2018-10-20T15:24:21.8288604-03:00</Time>
     </Item>
     <Item>
@@ -61,7 +61,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld3\BielWorld\BielWorld\bin\x86\Release\Content\Textures\chao.xnb</Output>
+      <Output>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld4\BielWorld\BielWorld\bin\x86\Release\Content\Textures\chao.xnb</Output>
       <Time>2018-10-20T15:28:37.8625441-03:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
@@ -71,10 +71,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Release</BuildConfiguration>
       <CompressContent>true</CompressContent>
-      <RootDirectory>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld3\BielWorld\BielWorldContent\</RootDirectory>
-      <LoggerRootDirectory>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld3\BielWorld\BielWorld\</LoggerRootDirectory>
-      <IntermediateDirectory>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld3\BielWorld\BielWorld\obj\x86\Release\</IntermediateDirectory>
-      <OutputDirectory>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld3\BielWorld\BielWorld\bin\x86\Release\Content\</OutputDirectory>
+      <RootDirectory>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld4\BielWorld\BielWorldContent\</RootDirectory>
+      <LoggerRootDirectory>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld4\BielWorld\BielWorld\</LoggerRootDirectory>
+      <IntermediateDirectory>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld4\BielWorld\BielWorld\obj\x86\Release\</IntermediateDirectory>
+      <OutputDirectory>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld4\BielWorld\BielWorld\bin\x86\Release\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
