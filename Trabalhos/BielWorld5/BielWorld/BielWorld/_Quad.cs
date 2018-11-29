@@ -22,7 +22,7 @@ namespace BielWorld
         private Texture2D texture, texture2;
 
         private float multi;
-        private bool flag;
+        private bool pode;
 
         Vector3 v0;
         Vector3 v1;
@@ -84,7 +84,7 @@ namespace BielWorld
             this.texture = this.game.Content.Load<Texture2D>(textureName);
             this.texture2 = this.game.Content.Load<Texture2D>(texture2Name);
             multi = 0;
-            flag = false;
+            pode = false;
         }
 
         public void Update(GameTime gameTime)
@@ -94,17 +94,17 @@ namespace BielWorld
 
         public virtual void Draw(_Camera camera)
         {
-            if (multi >= 3 && !flag)
+            if (multi >= 3 && !pode)
             {
-                flag = true;
+                pode = true;
             }
 
-            if (multi <= 0 && flag)
+            if (multi <= 0 && pode)
             {
-                flag = false;
+                pode = false;
             }
 
-            if (flag)
+            if (pode)
             {
                 multi -= 0.003f;
             }
@@ -112,6 +112,7 @@ namespace BielWorld
             {
                 multi += 0.003f;
             }
+            
 
             this.device.SetVertexBuffer(this.buffer);
 

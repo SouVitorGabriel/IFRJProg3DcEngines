@@ -46,7 +46,7 @@ namespace BielWorld
 
             this.camera = new _Camera();
 
-            this.ground = new _Quad(GraphicsDevice, this, @"Textures\chao", @"Textures\rec", new Vector3(0, 0, 0), new Vector2(500, 500), _WallOrientation.Up);
+            this.ground = new _Quad(GraphicsDevice, this, @"Textures\ground", @"Textures\groundSnow", new Vector3(0, 0, 0), new Vector2(500, 500), _WallOrientation.Up);
 
             this.house = new _House(GraphicsDevice, this);
 

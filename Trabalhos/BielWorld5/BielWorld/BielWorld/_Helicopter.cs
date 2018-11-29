@@ -12,7 +12,7 @@ namespace BielWorld
         private Game game;
         private GraphicsDevice device;
         private Matrix world;
-        private string texMetal, texHelix, texHeli, texWindow;
+        private string texMetal, texMetalSnow, texHelix, texHelixSnow, texHeli, texHeliSnow, texWindow, texWindowSnow;
 
         private _Quad[] sides;
         private _Quad[] backHelixSides, topHelixSides;
@@ -38,9 +38,16 @@ namespace BielWorld
 
 
             this.texMetal = @"Textures\helix";
+            this.texMetalSnow = @"Textures\helixSnow";
+
             this.texHelix = @"Textures\helix";
+            this.texHelixSnow = @"Textures\helixSnow";
+
             this.texHeli = @"Textures\helicop";
+            this.texHeliSnow = @"Textures\helicopSnow";
+
             this.texWindow = @"Textures\rec";
+            this.texWindowSnow = @"Textures\windowSnow";
 
             this.boundingBox = new BoundingBox();
             //this.boundingBox = new BoundingBox();
@@ -51,99 +58,99 @@ namespace BielWorld
 
             this.sides = new _Quad[]
             {
-                new _Quad(this.device, this.game, this.texHeli, this.texWindow, new Vector3(0, 5.5f, 0), new Vector2(10, 5), _WallOrientation.South), //frente
-                new _Quad(this.device, this.game, this.texWindow, this.texWindow, new Vector3(0, 0, 0), new Vector2(10, 4.2f), _WallOrientation.South), //frente vidro
-                new _Quad(this.device, this.game, this.texMetal, this.texWindow, new Vector3(3.5f, 0.5f, -1), new Vector2(2, 1), _WallOrientation.South), //pe direito
-                new _Quad(this.device, this.game, this.texMetal, this.texWindow, new Vector3(-3.5f, 0.5f, -1), new Vector2(2, 1), _WallOrientation.South), //esquerdo
-                new _Quad(this.device, this.game, this.texMetal, this.texWindow, new Vector3(3.5f, 2, -4), new Vector2(1, 2), _WallOrientation.South),
-                new _Quad(this.device, this.game, this.texMetal, this.texWindow, new Vector3(-3.5f, 2, -4), new Vector2(1, 2), _WallOrientation.South),
+                new _Quad(this.device, this.game, this.texHeli, this.texHeliSnow, new Vector3(0, 5.5f, 0), new Vector2(10, 5), _WallOrientation.South), //frente
+                new _Quad(this.device, this.game, this.texWindow, this.texWindowSnow, new Vector3(0, 0, 0), new Vector2(10, 4.2f), _WallOrientation.South), //frente vidro
+                new _Quad(this.device, this.game, this.texMetal, this.texMetalSnow, new Vector3(3.5f, 0.5f, -1), new Vector2(2, 1), _WallOrientation.South), //pe direito
+                new _Quad(this.device, this.game, this.texMetal, this.texMetalSnow, new Vector3(-3.5f, 0.5f, -1), new Vector2(2, 1), _WallOrientation.South), //esquerdo
+                new _Quad(this.device, this.game, this.texMetal, this.texMetalSnow, new Vector3(3.5f, 2, -4), new Vector2(1, 2), _WallOrientation.South),
+                new _Quad(this.device, this.game, this.texMetal, this.texMetalSnow, new Vector3(-3.5f, 2, -4), new Vector2(1, 2), _WallOrientation.South),
                 //lado esquerdo
-                new _Quad(this.device, this.game, this.texHeli, this.texWindow, new Vector3(-5, 5.5f, -6), new Vector2(12, 5), _WallOrientation.West),
-                new _Quad(this.device, this.game, this.texHeli, this.texWindow, new Vector3(-5, 9.5f, -7.5f), new Vector2(9, 3), _WallOrientation.West),
-                new _Quad(this.device, this.game, this.texHeli, this.texWindow, new Vector3(0,0,0), new Vector2(3.5f, 4.2f), _WallOrientation.West), //[8]
-                new _Quad(this.device, this.game, this.texMetal, this.texWindow, new Vector3(-4f, 2, -6), new Vector2(4, 2), _WallOrientation.West), //pes
-                new _Quad(this.device, this.game, this.texMetal, this.texWindow, new Vector3(-4.5f, 0.5f, -6), new Vector2(10, 1), _WallOrientation.West),
-                new _Quad(this.device, this.game, this.texMetal, this.texWindow, new Vector3(3f, 2, -6), new Vector2(4, 2), _WallOrientation.West),
-                new _Quad(this.device, this.game, this.texMetal, this.texWindow, new Vector3(2.5f, 0.5f, -6), new Vector2(10, 1), _WallOrientation.West),
+                new _Quad(this.device, this.game, this.texHeli, this.texHeliSnow, new Vector3(-5, 5.5f, -6), new Vector2(12, 5), _WallOrientation.West),
+                new _Quad(this.device, this.game, this.texHeli, this.texHeliSnow, new Vector3(-5, 9.5f, -7.5f), new Vector2(9, 3), _WallOrientation.West),
+                new _Quad(this.device, this.game, this.texHeli, this.texHeliSnow, new Vector3(0,0,0), new Vector2(3.5f, 4.2f), _WallOrientation.West), //[8]
+                new _Quad(this.device, this.game, this.texMetal, this.texMetalSnow, new Vector3(-4f, 2, -6), new Vector2(4, 2), _WallOrientation.West), //pes
+                new _Quad(this.device, this.game, this.texMetal, this.texMetalSnow, new Vector3(-4.5f, 0.5f, -6), new Vector2(10, 1), _WallOrientation.West),
+                new _Quad(this.device, this.game, this.texMetal, this.texMetalSnow, new Vector3(3f, 2, -6), new Vector2(4, 2), _WallOrientation.West),
+                new _Quad(this.device, this.game, this.texMetal, this.texMetalSnow, new Vector3(2.5f, 0.5f, -6), new Vector2(10, 1), _WallOrientation.West),
                // 
                 //lado direito
-                new _Quad(this.device, this.game, this.texHeli, this.texWindow, new Vector3(5, 5.5f, -6), new Vector2(12, 5), _WallOrientation.East),
-                new _Quad(this.device, this.game, this.texHeli, this.texWindow, new Vector3(5, 9.5f, -7.5f), new Vector2(9, 3), _WallOrientation.East),
-                new _Quad(this.device, this.game, this.texHeli, this.texWindow, new Vector3(0,0,0), new Vector2(3.5f, 4.2f), _WallOrientation.East), //[15]
-                new _Quad(this.device, this.game, this.texMetal, this.texWindow, new Vector3(4f, 2, -6), new Vector2(4, 2), _WallOrientation.East), //pes
-                new _Quad(this.device, this.game, this.texMetal, this.texWindow, new Vector3(4.5f, 0.5f, -6), new Vector2(10, 1), _WallOrientation.East),
-                new _Quad(this.device, this.game, this.texMetal, this.texWindow, new Vector3(-3f, 2, -6), new Vector2(4, 2), _WallOrientation.East),
-                new _Quad(this.device, this.game, this.texMetal, this.texWindow, new Vector3(-2.5f, 0.5f, -6), new Vector2(10, 1), _WallOrientation.East),
+                new _Quad(this.device, this.game, this.texHeli, this.texHeliSnow, new Vector3(5, 5.5f, -6), new Vector2(12, 5), _WallOrientation.East),
+                new _Quad(this.device, this.game, this.texHeli, this.texHeliSnow, new Vector3(5, 9.5f, -7.5f), new Vector2(9, 3), _WallOrientation.East),
+                new _Quad(this.device, this.game, this.texHeli, this.texHeliSnow, new Vector3(0,0,0), new Vector2(3.5f, 4.2f), _WallOrientation.East), //[15]
+                new _Quad(this.device, this.game, this.texMetal, this.texMetalSnow, new Vector3(4f, 2, -6), new Vector2(4, 2), _WallOrientation.East), //pes
+                new _Quad(this.device, this.game, this.texMetal, this.texMetalSnow, new Vector3(4.5f, 0.5f, -6), new Vector2(10, 1), _WallOrientation.East),
+                new _Quad(this.device, this.game, this.texMetal, this.texMetalSnow, new Vector3(-3f, 2, -6), new Vector2(4, 2), _WallOrientation.East),
+                new _Quad(this.device, this.game, this.texMetal, this.texMetalSnow, new Vector3(-2.5f, 0.5f, -6), new Vector2(10, 1), _WallOrientation.East),
 
-                 new _Quad(this.device, this.game, this.texMetal, this.texWindow, new Vector3(3.5f, 0.5f, -11), new Vector2(2, 1), _WallOrientation.North), //pe direito
-                new _Quad(this.device, this.game, this.texMetal, this.texWindow, new Vector3(-3.5f, 0.5f, -11), new Vector2(2, 1), _WallOrientation.North), //esquerdo
-                new _Quad(this.device, this.game, this.texMetal, this.texWindow, new Vector3(3.5f, 2, -8), new Vector2(1, 2), _WallOrientation.North),
-                new _Quad(this.device, this.game, this.texMetal, this.texWindow, new Vector3(-3.5f, 2, -8), new Vector2(1, 2), _WallOrientation.North),
+                 new _Quad(this.device, this.game, this.texMetal, this.texMetalSnow, new Vector3(3.5f, 0.5f, -11), new Vector2(2, 1), _WallOrientation.North), //pe direito
+                new _Quad(this.device, this.game, this.texMetal, this.texMetalSnow, new Vector3(-3.5f, 0.5f, -11), new Vector2(2, 1), _WallOrientation.North), //esquerdo
+                new _Quad(this.device, this.game, this.texMetal, this.texMetalSnow, new Vector3(3.5f, 2, -8), new Vector2(1, 2), _WallOrientation.North),
+                new _Quad(this.device, this.game, this.texMetal, this.texMetalSnow, new Vector3(-3.5f, 2, -8), new Vector2(1, 2), _WallOrientation.North),
 
-                new _Quad(this.device, this.game, this.texMetal, this.texWindow, new Vector3(-3.5f, 1, -6), new Vector2(2, 10), _WallOrientation.Up),
-                new _Quad(this.device, this.game, this.texMetal, this.texWindow, new Vector3(3.5f, 1, -6), new Vector2(2, 10), _WallOrientation.Up),
+                new _Quad(this.device, this.game, this.texMetal, this.texMetalSnow, new Vector3(-3.5f, 1, -6), new Vector2(2, 10), _WallOrientation.Up),
+                new _Quad(this.device, this.game, this.texMetal, this.texMetalSnow, new Vector3(3.5f, 1, -6), new Vector2(2, 10), _WallOrientation.Up),
 
-                new _Quad(this.device, this.game, this.texMetal, this.texWindow, new Vector3(-3.5f, 0, -6), new Vector2(2, 10), _WallOrientation.Down),
-                new _Quad(this.device, this.game, this.texMetal, this.texWindow, new Vector3(3.5f, 0, -6), new Vector2(2, 10), _WallOrientation.Down),
+                new _Quad(this.device, this.game, this.texMetal, this.texMetalSnow, new Vector3(-3.5f, 0, -6), new Vector2(2, 10), _WallOrientation.Down),
+                new _Quad(this.device, this.game, this.texMetal, this.texMetalSnow, new Vector3(3.5f, 0, -6), new Vector2(2, 10), _WallOrientation.Down),
 
-                new _Quad(this.device, this.game, this.texMetal, this.texWindow, new Vector3(-3.5f, 1, -6), new Vector2(2, 10), _WallOrientation.Down),
-                new _Quad(this.device, this.game, this.texMetal, this.texWindow, new Vector3(3.5f, 1, -6), new Vector2(2, 10), _WallOrientation.Down),
+                new _Quad(this.device, this.game, this.texMetal, this.texMetalSnow, new Vector3(-3.5f, 1, -6), new Vector2(2, 10), _WallOrientation.Down),
+                new _Quad(this.device, this.game, this.texMetal, this.texMetalSnow, new Vector3(3.5f, 1, -6), new Vector2(2, 10), _WallOrientation.Down),
 
-                new _Quad(this.device, this.game, this.texHeli, this.texWindow, new Vector3(0, 7f, -12), new Vector2(10, 8), _WallOrientation.North), //atras do 
+                new _Quad(this.device, this.game, this.texHeli, this.texHeliSnow, new Vector3(0, 7f, -12), new Vector2(10, 8), _WallOrientation.North), //atras do 
 
-                new _Quad(this.device, this.game, this.texHeli, this.texWindow, new Vector3(-1, 6.5f, -17f), new Vector2(10, 3), _WallOrientation.West), //calda
-                new _Quad(this.device, this.game, this.texHeli, this.texWindow, new Vector3(1, 6.5f, -17f), new Vector2(10, 3), _WallOrientation.East), //calda
-                new _Quad(this.device, this.game, this.texHeli, this.texWindow, new Vector3(0, 8f, -17f), new Vector2(2, 10), _WallOrientation.Up), //calda cima
-                new _Quad(this.device, this.game, this.texHeli, this.texWindow, new Vector3(0, 5f, -17f), new Vector2(2, 10), _WallOrientation.Down), //calda baixo 
+                new _Quad(this.device, this.game, this.texHeli, this.texHeliSnow, new Vector3(-1, 6.5f, -17f), new Vector2(10, 3), _WallOrientation.West), //calda
+                new _Quad(this.device, this.game, this.texHeli, this.texHeliSnow, new Vector3(1, 6.5f, -17f), new Vector2(10, 3), _WallOrientation.East), //calda
+                new _Quad(this.device, this.game, this.texHeli, this.texHeliSnow, new Vector3(0, 8f, -17f), new Vector2(2, 10), _WallOrientation.Up), //calda cima
+                new _Quad(this.device, this.game, this.texHeli, this.texHeliSnow, new Vector3(0, 5f, -17f), new Vector2(2, 10), _WallOrientation.Down), //calda baixo 
                                                               
-                new _Quad(this.device, this.game, this.texHeli, this.texWindow, new Vector3(0, 6.4f, -22f), new Vector2(3f, 5f), _WallOrientation.South), //area da helice frente
-                new _Quad(this.device, this.game, this.texHeli, this.texWindow, new Vector3(0, 6.4f, -26.8f), new Vector2(3f, 5f), _WallOrientation.North), //area da helice atras
-                new _Quad(this.device, this.game, this.texHeli, this.texWindow, new Vector3(0, 6.4f, -22f), new Vector2(3f, 5f), _WallOrientation.North), //area da helice frente
-                new _Quad(this.device, this.game, this.texHeli, this.texWindow, new Vector3(0, 6.4f, -26.8f), new Vector2(3f, 5f), _WallOrientation.South), //area da helice atras
-                new _Quad(this.device, this.game, this.texHeli, this.texWindow, new Vector3(0, 8.9f, -24.4f), new Vector2(3f, 5f), _WallOrientation.Up), //area da helice cima
-                new _Quad(this.device, this.game, this.texHeli, this.texWindow, new Vector3(0, 4.1f, -24.4f), new Vector2(3f, 5f), _WallOrientation.Down), //area da helice abaixo
-                new _Quad(this.device, this.game, this.texHeli, this.texWindow, new Vector3(0, 8.9f, -24.4f), new Vector2(3f, 5f), _WallOrientation.Down), //area da helice cima
-                new _Quad(this.device, this.game, this.texHeli, this.texWindow, new Vector3(0, 4.1f, -24.4f), new Vector2(3f, 5f), _WallOrientation.Up), //area da helice abaixo
+                new _Quad(this.device, this.game, this.texHeli, this.texHeliSnow, new Vector3(0, 6.4f, -22f), new Vector2(3f, 5f), _WallOrientation.South), //area da helice frente
+                new _Quad(this.device, this.game, this.texHeli, this.texHeliSnow, new Vector3(0, 6.4f, -26.8f), new Vector2(3f, 5f), _WallOrientation.North), //area da helice atras
+                new _Quad(this.device, this.game, this.texHeli, this.texHeliSnow, new Vector3(0, 6.4f, -22f), new Vector2(3f, 5f), _WallOrientation.North), //area da helice frente
+                new _Quad(this.device, this.game, this.texHeli, this.texHeliSnow, new Vector3(0, 6.4f, -26.8f), new Vector2(3f, 5f), _WallOrientation.South), //area da helice atras
+                new _Quad(this.device, this.game, this.texHeli, this.texHeliSnow, new Vector3(0, 8.9f, -24.4f), new Vector2(3f, 5f), _WallOrientation.Up), //area da helice cima
+                new _Quad(this.device, this.game, this.texHeli, this.texHeliSnow, new Vector3(0, 4.1f, -24.4f), new Vector2(3f, 5f), _WallOrientation.Down), //area da helice abaixo
+                new _Quad(this.device, this.game, this.texHeli, this.texHeliSnow, new Vector3(0, 8.9f, -24.4f), new Vector2(3f, 5f), _WallOrientation.Down), //area da helice cima
+                new _Quad(this.device, this.game, this.texHeli, this.texHeliSnow, new Vector3(0, 4.1f, -24.4f), new Vector2(3f, 5f), _WallOrientation.Up), //area da helice abaixo
                                                                 
                                                                 
-                new _Quad(this.device, this.game, this.texHeli, this.texWindow, new Vector3(-1.5f, 4.2f, -24.4f), new Vector2(5, 0.5f), _WallOrientation.West), //area da helice abaixo
-                new _Quad(this.device, this.game, this.texHeli, this.texWindow, new Vector3(-1.5f, 8.7f, -24.4f), new Vector2(5, 0.5f), _WallOrientation.West), //area da helice acima
-                new _Quad(this.device, this.game, this.texHeli, this.texWindow, new Vector3(-1.5f, 6.4f, -22.15f), new Vector2(0.5f, 4.2f), _WallOrientation.West), //area da helice direita
-                new _Quad(this.device, this.game, this.texHeli, this.texWindow, new Vector3(-1.5f, 6.4f, -26.65f), new Vector2(0.5f, 4.2f), _WallOrientation.West), //area da helice esquerda
+                new _Quad(this.device, this.game, this.texHeli, this.texHeliSnow, new Vector3(-1.5f, 4.2f, -24.4f), new Vector2(5, 0.5f), _WallOrientation.West), //area da helice abaixo
+                new _Quad(this.device, this.game, this.texHeli, this.texHeliSnow, new Vector3(-1.5f, 8.7f, -24.4f), new Vector2(5, 0.5f), _WallOrientation.West), //area da helice acima
+                new _Quad(this.device, this.game, this.texHeli, this.texHeliSnow, new Vector3(-1.5f, 6.4f, -22.15f), new Vector2(0.5f, 4.2f), _WallOrientation.West), //area da helice direita
+                new _Quad(this.device, this.game, this.texHeli, this.texHeliSnow, new Vector3(-1.5f, 6.4f, -26.65f), new Vector2(0.5f, 4.2f), _WallOrientation.West), //area da helice esquerda
                                                                 
-                new _Quad(this.device, this.game, this.texHeli, this.texWindow, new Vector3(1.5f, 4.2f, -24.4f), new Vector2(5, 0.5f), _WallOrientation.East), //area da helice abaixo
-                new _Quad(this.device, this.game, this.texHeli, this.texWindow, new Vector3(1.5f, 8.7f, -24.4f), new Vector2(5, 0.5f), _WallOrientation.East), //area da helice acima
-                new _Quad(this.device, this.game, this.texHeli, this.texWindow, new Vector3(1.5f, 6.4f, -22.15f), new Vector2(0.5f, 4.2f), _WallOrientation.East), //area da helice direita
-                new _Quad(this.device, this.game, this.texHeli, this.texWindow, new Vector3(1.5f, 6.4f, -26.65f), new Vector2(0.5f, 4.2f), _WallOrientation.East), //area da helice esquerda
+                new _Quad(this.device, this.game, this.texHeli, this.texHeliSnow, new Vector3(1.5f, 4.2f, -24.4f), new Vector2(5, 0.5f), _WallOrientation.East), //area da helice abaixo
+                new _Quad(this.device, this.game, this.texHeli, this.texHeliSnow, new Vector3(1.5f, 8.7f, -24.4f), new Vector2(5, 0.5f), _WallOrientation.East), //area da helice acima
+                new _Quad(this.device, this.game, this.texHeli, this.texHeliSnow, new Vector3(1.5f, 6.4f, -22.15f), new Vector2(0.5f, 4.2f), _WallOrientation.East), //area da helice direita
+                new _Quad(this.device, this.game, this.texHeli, this.texHeliSnow, new Vector3(1.5f, 6.4f, -26.65f), new Vector2(0.5f, 4.2f), _WallOrientation.East), //area da helice esquerda
                                                                 
 
-                new _Quad(this.device, this.game, this.texHeli, this.texWindow, new Vector3(1.5f, 6.5f, -24.4f), new Vector2(5, 0.5f), _WallOrientation.East), //area da helice apoio
-                new _Quad(this.device, this.game, this.texHeli, this.texWindow, new Vector3(1.5f, 6.5f, -24.4f), new Vector2(5, 0.5f), _WallOrientation.West), //area da helice apoio
+                new _Quad(this.device, this.game, this.texHeli, this.texHeliSnow, new Vector3(1.5f, 6.5f, -24.4f), new Vector2(5, 0.5f), _WallOrientation.East), //area da helice apoio
+                new _Quad(this.device, this.game, this.texHeli, this.texHeliSnow, new Vector3(1.5f, 6.5f, -24.4f), new Vector2(5, 0.5f), _WallOrientation.West), //area da helice apoio
                                                              
 
-                new _Quad(this.device, this.game, this.texHeli, this.texWindow, new Vector3(0, 11f, -7.5f), new Vector2(10, 9), _WallOrientation.Up), //teto
-                new _Quad(this.device, this.game, this.texHeli, this.texWindow, new Vector3(0, 3f, -6f), new Vector2(10, 12), _WallOrientation.Down), //assoalho 
+                new _Quad(this.device, this.game, this.texHeli, this.texHeliSnow, new Vector3(0, 11f, -7.5f), new Vector2(10, 9), _WallOrientation.Up), //teto
+                new _Quad(this.device, this.game, this.texHeli, this.texHeliSnow, new Vector3(0, 3f, -6f), new Vector2(10, 12), _WallOrientation.Down), //assoalho 
             };
 
             this.backHelixSides = new _Quad[]
                 {
-                    new _Quad(this.device, this.game, this.texHelix, this.texWindow, new Vector3(0,0,0), new Vector2(0.5f, 3f), _WallOrientation.East),
-                    new _Quad(this.device, this.game, this.texHelix, this.texWindow, new Vector3(0,0,0), new Vector2(3f, 0.5f), _WallOrientation.East),
-                    new _Quad(this.device, this.game, this.texHelix, this.texWindow, new Vector3(0,0,0), new Vector2(0.5f, 3f), _WallOrientation.West),
-                    new _Quad(this.device, this.game, this.texHelix, this.texWindow, new Vector3(0,0,0), new Vector2(3f, 0.5f), _WallOrientation.West),
+                    new _Quad(this.device, this.game, this.texHelix, this.texHelixSnow, new Vector3(0,0,0), new Vector2(0.5f, 3f), _WallOrientation.East),
+                    new _Quad(this.device, this.game, this.texHelix, this.texHelixSnow, new Vector3(0,0,0), new Vector2(3f, 0.5f), _WallOrientation.East),
+                    new _Quad(this.device, this.game, this.texHelix, this.texHelixSnow, new Vector3(0,0,0), new Vector2(0.5f, 3f), _WallOrientation.West),
+                    new _Quad(this.device, this.game, this.texHelix, this.texHelixSnow, new Vector3(0,0,0), new Vector2(3f, 0.5f), _WallOrientation.West),
                 }; 
 
             this.topHelixSides = new _Quad[]
                 {
-                    new _Quad(this.device, this.game, this.texHelix, this.texWindow, new Vector3(0,0,0), new Vector2(16f, 1f), _WallOrientation.Up),
-                    new _Quad(this.device, this.game, this.texHelix, this.texWindow, new Vector3(0,0,0), new Vector2(1f, 16f), _WallOrientation.Down),
-                    new _Quad(this.device, this.game, this.texHelix, this.texWindow, new Vector3(0,0,0), new Vector2(16f, 1f), _WallOrientation.Down),
-                    new _Quad(this.device, this.game, this.texHelix, this.texWindow, new Vector3(0,0,0), new Vector2(1f, 16f), _WallOrientation.Up),
-                                                                     
-                    new _Quad(this.device, this.game, this.texHelix, this.texWindow, new Vector3(0,-1,0), new Vector2(1f, 2f), _WallOrientation.West),
-                    new _Quad(this.device, this.game, this.texHelix, this.texWindow, new Vector3(0,-1,0), new Vector2(1f, 2f), _WallOrientation.East),
-                    new _Quad(this.device, this.game, this.texHelix, this.texWindow, new Vector3(0,-1,0), new Vector2(1f, 2f), _WallOrientation.North),
-                    new _Quad(this.device, this.game, this.texHelix, this.texWindow, new Vector3(0,-1,0), new Vector2(1f, 2f), _WallOrientation.South),
+                    new _Quad(this.device, this.game, this.texHelix, this.texHelixSnow, new Vector3(0,0,0), new Vector2(16f, 1f), _WallOrientation.Up),
+                    new _Quad(this.device, this.game, this.texHelix, this.texHelixSnow, new Vector3(0,0,0), new Vector2(1f, 16f), _WallOrientation.Down),
+                    new _Quad(this.device, this.game, this.texHelix, this.texHelixSnow, new Vector3(0,0,0), new Vector2(16f, 1f), _WallOrientation.Down),
+                    new _Quad(this.device, this.game, this.texHelix, this.texHelixSnow, new Vector3(0,0,0), new Vector2(1f, 16f), _WallOrientation.Up),
+                                                                         
+                    new _Quad(this.device, this.game, this.texHelix, this.texHelixSnow, new Vector3(0,-1,0), new Vector2(1f, 2f), _WallOrientation.West),
+                    new _Quad(this.device, this.game, this.texHelix, this.texHelixSnow, new Vector3(0,-1,0), new Vector2(1f, 2f), _WallOrientation.East),
+                    new _Quad(this.device, this.game, this.texHelix, this.texHelixSnow, new Vector3(0,-1,0), new Vector2(1f, 2f), _WallOrientation.North),
+                    new _Quad(this.device, this.game, this.texHelix, this.texHelixSnow, new Vector3(0,-1,0), new Vector2(1f, 2f), _WallOrientation.South),
                 };
         }
 

@@ -11,15 +11,6 @@
       <Time>2018-10-20T15:12:23.5377785-03:00</Time>
     </Item>
     <Item>
-      <Source>Textures\porta.jpg</Source>
-      <Name>Textures\porta</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld5\BielWorld\BielWorld\bin\x86\Debug\Content\Textures\porta.xnb</Output>
-      <Time>2018-10-20T15:12:23.5277942-03:00</Time>
-    </Item>
-    <Item>
       <Source>Textures\rec.jpg</Source>
       <Name>Textures\rec</Name>
       <Importer>TextureImporter</Importer>
@@ -72,6 +63,96 @@
       <Options>None</Options>
       <Output>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld5\BielWorld\BielWorld\bin\x86\Debug\Content\Effect\Effect1.xnb</Output>
       <Time>2018-11-29T01:25:36.3981957-02:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\ground.jpg</Source>
+      <Name>Textures\ground</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld5\BielWorld\BielWorld\bin\x86\Debug\Content\Textures\ground.xnb</Output>
+      <Time>2018-11-29T03:39:56.6959902-02:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\groundSnow.jpg</Source>
+      <Name>Textures\groundSnow</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld5\BielWorld\BielWorld\bin\x86\Debug\Content\Textures\groundSnow.xnb</Output>
+      <Time>2018-11-29T03:36:18.8821139-02:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\door.jpg</Source>
+      <Name>Textures\door</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld5\BielWorld\BielWorld\bin\x86\Debug\Content\Textures\door.xnb</Output>
+      <Time>2018-10-20T15:12:23.5277942-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\walls.jpg</Source>
+      <Name>Textures\walls</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld5\BielWorld\BielWorld\bin\x86\Debug\Content\Textures\walls.xnb</Output>
+      <Time>2018-11-29T04:44:15.1084489-02:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\doorSnow.jpg</Source>
+      <Name>Textures\doorSnow</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld5\BielWorld\BielWorld\bin\x86\Debug\Content\Textures\doorSnow.xnb</Output>
+      <Time>2018-11-29T04:34:31.8969349-02:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\tetoSnow.jpg</Source>
+      <Name>Textures\tetoSnow</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld5\BielWorld\BielWorld\bin\x86\Debug\Content\Textures\tetoSnow.xnb</Output>
+      <Time>2018-11-29T04:34:32.0157867-02:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\windowSnow.jpg</Source>
+      <Name>Textures\windowSnow</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld5\BielWorld\BielWorld\bin\x86\Debug\Content\Textures\windowSnow.xnb</Output>
+      <Time>2018-11-29T04:34:25.851496-02:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\wallsSnow.jpg</Source>
+      <Name>Textures\wallsSnow</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld5\BielWorld\BielWorld\bin\x86\Debug\Content\Textures\wallsSnow.xnb</Output>
+      <Time>2018-11-29T04:42:04.3612473-02:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\helicopSnow.jpg</Source>
+      <Name>Textures\helicopSnow</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld5\BielWorld\BielWorld\bin\x86\Debug\Content\Textures\helicopSnow.xnb</Output>
+      <Time>2018-11-29T04:50:16.4280405-02:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\helixSnow.jpg</Source>
+      <Name>Textures\helixSnow</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld5\BielWorld\BielWorld\bin\x86\Debug\Content\Textures\helixSnow.xnb</Output>
+      <Time>2018-11-29T04:50:16.4220519-02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
