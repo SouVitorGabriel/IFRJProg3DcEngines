@@ -1,0 +1,8 @@
+E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld\BielWorld\BielWorldContent\obj\x86\Release\BielWorldContent.contentprojAssemblyReference.cache
+E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld\BielWorld\BielWorldContent\obj\x86\Release\BielWorldContent.contentproj.CoreCompileInputs.cache
+E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld2\BielWorld\BielWorldContent\obj\x86\Release\BielWorldContent.contentprojAssemblyReference.cache
+E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld2\BielWorld\BielWorldContent\obj\x86\Release\BielWorldContent.contentproj.CoreCompileInputs.cache
+E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld3\BielWorld\BielWorldContent\obj\x86\Release\BielWorldContent.contentprojAssemblyReference.cache
+E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld3\BielWorld\BielWorldContent\obj\x86\Release\BielWorldContent.contentproj.CoreCompileInputs.cache
+E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld4\BielWorld\BielWorldContent\obj\x86\Release\BielWorldContent.contentprojAssemblyReference.cache
+E:\Documentos\IFRJ\2018_2\Programacao3D\Trabalhos\BielWorld4\BielWorld\BielWorldContent\obj\x86\Release\BielWorldContent.contentproj.CoreCompileInputs.cache
